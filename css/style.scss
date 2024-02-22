@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    width: 100%;
+}
+.container{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    background-image: url("../images/music-for-you-gu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+main{
+    background-image: url("../images/girl-watching-shooting-star-alone-wallpaper-2400x1350_50.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#menu_icon{
+    display: none !important;
+    color: #fff;
+}
+
+@import "./header/header";
+@import "./main/main";
+@import "./footer/footer";

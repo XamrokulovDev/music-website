@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Music</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Music</h1>
+                </div>
+                <ul class="menu" id="menu">
+                    <li class="menu_item"><a href="#" class="menu_link">Home</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">About</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Music</a></li>
+                    <li class="menu_item"><a href="#"class="menu_link">Videos</a></li>
+                </ul>
+                <i class='bx bx-menu bx-lg' id="menu_icon"></i>
+            </div>
+        </nav>
+        <div class="header_main container">
+            <div class="header_text">
+                <h1>Welcome to our online platform</h1>
+                <p>It is important to talk about the best aspects of listening to music. 
+                   Music provides people with a sense of peace, tranquility and rebellion. 
+                   This expands their knowledge and experience.
+                </p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="music container">
+            <div class="main_img"></div>
+            <div class="main_text">
+                <h1>Enjoy listening to music</h1>
+                <span>
+                    <audio controls autoplay muted>
+                        <source src="./audio/main_audio.mp3" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg">
+                    </audio>
+                    <a href="#"><button type="submit">continue</button></a>
+                </span>
+            </div>
+        </div>
+    </main>
+    <script src="./javascript/app.js"></script>
+</body>
+</html>

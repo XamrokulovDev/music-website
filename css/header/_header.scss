@@ -1,0 +1,205 @@
+@mixin flex ($justify: space-between,$items: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+}
+@mixin text($clr: #fff,$ff:'Roboto'){
+    color: $clr;
+    font-family: $ff,sans-serif;
+}
+.header{
+    .navbar{
+        padding: 20px 0;
+        background-color: rgba(79, 79, 79, 0.407);
+        backdrop-filter: blur(5px);
+        .container{
+            @include flex();
+            .logo{
+                @include text();
+                font-size: 20px;
+            }
+            .menu{
+                @include flex();
+                .menu_item{
+                    margin-left: 100px;
+                    .menu_link{
+                        @include text();
+                        padding: 5px 0;
+                        font-weight: bold;
+                        overflow: hidden;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 100%;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #fff;
+                            transition: all 0.5s linear;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            right: 100%;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #fff;
+                            transition: all 0.5s linear;
+                        }
+                        &:hover::after{
+                            left: 0;
+                        }
+                        &:hover::before{
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ----------Navbar tugagan qism!
+    .header_main{
+        @include flex($justify:center);
+        height: 60%;
+        .header_text{
+            margin-top: 100px;
+            text-align: center;
+            width: 60%;
+            padding: 20px;
+            border: 2px solid rgba(108, 108, 108, 0.457);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            background-color: rgba(51, 51, 51, 0.481);
+            @include text();
+            h1{
+                margin-bottom: 30px;
+                font-size: 35px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+// ------Resposive qism boshlandi!
+
+@media (min-width: 0px) and (max-width: 325px) {
+    .header{
+        background-position-x: left;
+        .navbar{
+            position: relative;
+            .container{
+                .menu{
+                    position: absolute;
+                    bottom: -128px;
+                    right: 10vw;
+                    flex-direction: column;
+                    background-color: rgba(63, 63, 63, 0.776);
+                    backdrop-filter: blur(5px);
+                    .menu_item{
+                        margin-left: 20px;
+                    }
+                    display: none;
+                }
+                #menu_icon{
+                    display: block !important;
+                }
+                .block{
+                    display: block !important;
+                }
+            }
+        }
+        .header_main{
+            display: none;
+        }
+    }
+}
+@media (min-width: 325px) and (max-width: 576px) {
+    .header{
+        background-position-x: left;
+        .navbar{
+            position: relative;
+            .container{
+                .menu{
+                    position: absolute;
+                    bottom: -128px;
+                    right: 10vw;
+                    flex-direction: column;
+                    background-color: rgba(63, 63, 63, 0.776);
+                    backdrop-filter: blur(5px);
+                    .menu_item{
+                        margin-left: 20px;
+                    }
+                    display: none !important;
+                }
+                #menu_icon{
+                    display: block !important;
+                }
+                .block{
+                    display: block !important;
+                }
+            }
+        }
+        .header_main{
+            margin-top: 30px;
+            .header_text{
+                width: 100%;
+                h1{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .header{
+        background-position-x: left;
+        .navbar{
+            position: relative;
+            .container{
+                .menu{
+                    position: absolute;
+                    bottom: -128px;
+                    right: 10vw;
+                    flex-direction: column;
+                    background-color: rgba(63, 63, 63, 0.776);
+                    backdrop-filter: blur(5px);
+                    .menu_item{
+                         margin-left: 20px;
+                    }
+                    display: none;
+                }
+                #menu_icon{
+                    display: block !important;
+                }
+                .block{
+                    display: block;
+                }
+            }
+        }
+        .header_main{
+            margin-top: 30px;
+            .header_text{
+                width: 90%;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header{
+        background-position: center;
+        .header_main{
+            margin-top: 100px;
+            .header_text{
+                width: 85%;
+            }
+        }
+    }
+}
